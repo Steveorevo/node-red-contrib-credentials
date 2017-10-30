@@ -1,8 +1,8 @@
 # node-red-contrib-credentials
 Provides a credentials node to store one or more values privately; preventing
 inadvertent export to flows or to version control commits. Node-RED stores
-your node information in flows.json and any values marked as credentials into
-an encrypted separate flows_cred.json file. Values marked as credentials are
+your node information in flows.json and any values setup as credentials into
+an encrypted separate flows_cred.json file. Values designated as credentials are
 also omitted when using the clipboard to keep your information private. Use
 this node to configure any property values you wish to keep private.
 
@@ -31,9 +31,14 @@ Regardless of hidden/string mode, the values are stored encrypted outside of
 the flows.json file.
 
 #### WordPress Login Example
-The following example shows how we can use the credentials node to supply Login
+The following example shows how we can use the credentials node to supply login
 information into a WordPress powered website to check for updates. This flow has
-the credentials node and the [nbrowser](https://github.com/steveorevo/node-red-contrib-nbrowser) nodes installed.
+the [credentials](https://github.com/steveorevo/node-red-contrib-credentials) node and the [nbrowser](https://github.com/steveorevo/node-red-contrib-nbrowser) node installed. Here we see the
+credentials node configured to store the login information in the msg.username
+and msg.password properties. The nbrowser node then uses the properties to type
+into the WordPress admin web page. Lastly, the html node is used to parse out the
+.update-count span element from the web page before sending it to the debug window.
+
 
 ![Node-RED WordPress Login](/credentials/demo/wp.jpg?raw=true "Check for WordPress updates")
 
