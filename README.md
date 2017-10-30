@@ -17,14 +17,14 @@ Here we will supply the msg object with two properties; username and password.
 
 ![Node-RED Basic Example](/credentials/demo/basic.jpg?raw=true "Basic use")
 
-The settings panel for the credentials node allows for storing one or more
-values. The private field has two modes "string" and "hidden". Both store
-information the same but "hidden" has the added benefit of hiding any observer's
-view of the value. After storage, changing the field from "hidden" to "string"
-prevents the user interface from revealing the contents. *Note: the value is
-stored using Node-RED's credentials API using the 'text' option; it is decoded
-in both runtime and editor mode. The value can be viewed using the debugger or
-when doing editor side DOM inspection. The "hidden" mode is only used to protect
+The settings panel for the credentials node enables storing one or more values.
+The private field has two modes "string" and "hidden". Both store information
+the same but "hidden" has the added benefit of hiding any observer's view of the
+value. After storage, changing the field from "hidden" to "string" prevents the
+user interface from revealing the contents. *Note: the value is stored using
+Node-RED's credentials API using the 'text' option; it is decoded in both
+runtime and editor mode. The value can be viewed using the debugger or when
+doing editor side DOM inspection. The "hidden" mode is only used to protect
 values from plain view.*
 
 Regardless of hidden/string mode, the values are stored encrypted outside of
@@ -36,8 +36,9 @@ information into a WordPress powered website to check for updates. This flow has
 the [credentials](https://github.com/steveorevo/node-red-contrib-credentials) node and the [nbrowser](https://github.com/steveorevo/node-red-contrib-nbrowser) node installed. Here we see the
 credentials node configured to store the login information in the msg.username
 and msg.password properties. The nbrowser node then uses the properties to type
-into the WordPress admin web page. Lastly, the html node is used to parse out the
-.update-count span element from the web page before sending it to the debug window.
+login credentials into WordPress' admin web page to access the dashboard.
+Lastly, the html node is used to parse out the .update-count span element from
+the web page before sending it to the debug window.
 
 
 ![Node-RED WordPress Login](/credentials/demo/wp.jpg?raw=true "Check for WordPress updates")
