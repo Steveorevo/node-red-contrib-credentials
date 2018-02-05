@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-credentials",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Provides a credentials node to store one or more private values; preventing export to flows or version control.",
   "author": "Stephen J. Carnam <steveorevo@gmail.com>",
   "license": "MIT",
@@ -20,8 +20,7 @@
     "type": "git",
     "url": "https://github.com/Steveorevo/node-red-contrib-credentials.git"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "node-red": {
     "nodes": {
       "credent": "credentials/credentials.js"
