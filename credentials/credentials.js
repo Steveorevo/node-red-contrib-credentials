@@ -13,6 +13,8 @@ module.exports = function(RED) {
       config.propr = [];
     }
 		var node = this;
+    var globalContext = this.context().global;
+    var flowContext = this.context().flow;
 		this.on('input', function(msg) {
       function setContextPropertyValue(context, property, value) {
           // Assign value to given object and property
