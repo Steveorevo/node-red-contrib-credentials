@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-credentials",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Provides a credentials node to store one or more private values; preventing export to flows or version control.",
   "author": "Stephen J. Carnam <steveorevo@gmail.com>",
   "license": "MIT",
